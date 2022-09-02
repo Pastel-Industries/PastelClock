@@ -31,6 +31,8 @@ updateinterval - Time between clock update
 utcOffsetInSeconds - Positive offset in seconds (UTC + 2hrs(7200 seconds)
 ```
 **Make sure that the ESP8266 is not inserted into the clock PCB while connected to the PC!**
+
+Some tubes might flicker from time to time, that's caused by poor code optimalization (I'll fix it soon).
 ## Features
 
 - `Two programmable switches` - Allows you to give them any purpose you wish
