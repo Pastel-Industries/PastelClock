@@ -1,5 +1,6 @@
 ## Description
-This clock is quite small, its dimensions are around 8x9x6cm. It uses ESP8266 Wemos module as a brain and two PCF8574A ICs for more pins. The clock can be powered from a 7.5V - 15V power supply due to step-up converter based on MC34063 IC. Nixie tubes are multiplexed by 14 MMBTA42 NPN transistors and 4 MMBTA92 PNP transistors. Tube voltage can be freely adjusted by turning a potentiometer. There are two microswitches in the design, I haven't found any usage for them, but you can edit the code as you wish. \
+This clock is quite small, its dimensions are around 8x9x6cm. It uses ESP8266 Wemos module as a brain and two PCF8574A ICs for more pins. The clock can be powered from a 7.5V - 15V power supply due to step-up converter based on MC34063 IC. Nixie tubes are multiplexed by 14 MMBTA42 NPN transistors and 4 MMBTA92 PNP transistors. Tube voltage can be freely adjusted by turning a potentiometer. There are two microswitches in the design, I haven't found any usage for them, but you can edit the code as you wish.\
+\
 ![alt text](https://github.com/Pastel-Industries/PastelClock/blob/main/clockfront.jpg)
 ## Preparing
 
@@ -25,7 +26,7 @@ WiFiUdp.h
 This is an explaination of available config:
 
 ```
-tubetime - Time in milliseconds of lamp ignite time (Increase when tube is not glowing, decrease when blinking is visible)
+tubetime - Time in milliseconds of lamp ignite time (Increase when tube is not glowing, decrease when flickering is visible)
 updateinterval - Time between clock update
 utcOffsetInSeconds - Positive offset in seconds (UTC + 2hrs(7200 seconds)
 ```
