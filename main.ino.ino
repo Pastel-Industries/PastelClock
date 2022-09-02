@@ -2,8 +2,8 @@
 #include <NTPClient.h>
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
-const char *ssid     = "Juan Pablo"; //Your WiFi SSID
-const char *password = "6Z5UMR3L"; //Your WiFi password
+const char *ssid     = "ssid"; //Your WiFi SSID
+const char *password = "pass"; //Your WiFi password
 
 //Pin definitions
 #define DG0 0
