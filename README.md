@@ -40,7 +40,7 @@ Some tubes might flicker from time to time, that's caused by poor code optimaliz
 
 
 ## Changelog
-`09.02.2022` - First version upload - fixed power supply issue. BOM coming soon!
+`09.02.2022` - First version upload - fixed power supply issue. BOM coming soon!\
 `09.02.2022` - Optimalized code, decreased amount of flickering. Improved code readability.
 ## Issues
 
