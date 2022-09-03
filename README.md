@@ -45,5 +45,5 @@ Some tubes might flicker from time to time, that's caused by poor code optimaliz
 ## Issues
 
 Feel free to open issues.\
-I am also availablee on discord: **Pastel137#4809**
+I am also available on discord: **Pastel137#4809**
 
