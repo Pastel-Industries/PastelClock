@@ -6,8 +6,8 @@
 //User config
 int tubetime = 3; //Time in milliseconds of lamp ignite time (Increase when tube is not glowing, decrease when flickering is visible)
 const long utcOffsetInSeconds = 7200; //Positive offset in seconds (UTC + 2hrs(7200 seconds))
-const char *ssid     = "Juan Pablo"; //Your WiFi SSID
-const char *password = "6Z5UMR3L"; //Your WiFi password
+const char *ssid     = "MySSID"; //Your WiFi SSID
+const char *password = "MyPASS"; //Your WiFi password
 
 //Pin definitions
 int cathodes[10] = {0, 1, 2, 3, 7, 6, 5, 4, 0, 1};
