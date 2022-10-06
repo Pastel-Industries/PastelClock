@@ -27,7 +27,6 @@ This is an explanation of available config:
 
 ```
 tubetime - Time in milliseconds of lamp ignite time (Increase when tube is not glowing, decrease when flickering is visible)
-updateinterval - Time between updates from NTP server
 utcOffsetInSeconds - Positive offset in seconds (UTC + 2hrs(7200 seconds))
 ```
 **Please, flash the ESP when not inserted into PCB!**
@@ -42,6 +41,7 @@ Some tubes might flicker from time to time.
 ## Changelog
 `02.09.2022` - First version upload - fixed power supply issue. BOM coming soon!\
 `03.09.2022` - Optimized code, decreased amount of flickering. Improved code readability.
+`06.10.2022` - Clock will update its time only at startup and then count it itself.
 ## Issues
 
 Feel free to open issues.\
