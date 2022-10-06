@@ -40,7 +40,7 @@ Some tubes might flicker from time to time.
 
 ## Changelog
 `02.09.2022` - First version upload - fixed power supply issue. BOM coming soon!\
-`03.09.2022` - Optimized code, decreased amount of flickering. Improved code readability.
+`03.09.2022` - Optimized code, decreased amount of flickering. Improved code readability.\
 `06.10.2022` - Clock will update its time only at startup and then count it itself.
 ## Issues
 
