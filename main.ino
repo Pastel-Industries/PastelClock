@@ -5,7 +5,6 @@
 
 //User config
 int tubetime = 3; //Time in milliseconds of lamp ignite time (Increase when tube is not glowing, decrease when flickering is visible)
-int updateinterval = 30000; //Time between clock update
 const long utcOffsetInSeconds = 7200; //Positive offset in seconds (UTC + 2hrs(7200 seconds))
 const char *ssid     = "Juan Pablo"; //Your WiFi SSID
 const char *password = "6Z5UMR3L"; //Your WiFi password
@@ -20,7 +19,7 @@ int digit1;
 int digit2;
 int digit3;
 int digit4;
-int oldmillis;
+int oldminutemillis;
 
 Adafruit_PCF8574 pcf1;
 Adafruit_PCF8574 pcf2;
@@ -139,9 +138,22 @@ void setup() {
 }
 
 void loop() {
-  //Update time every x milliseconds (default 20000)
-  if(millis() - oldmillis >= updateinterval){
-    updatetime();
+  //Update time every 60 seconds
+  if(millis() - oldminutemillis >= 60000){
+    minutes++;
+    if(minutes >= 60){
+      hours++;
+      if(hours >= 24){
+        hours = 0;
+      }
+      minutes = 0;
+    }
+    oldminutemillis = millis();
+    //chopping
+    digit1 = (hours/10)%10;
+    digit2 = hours%10;
+    digit3 = (minutes/10)%10;
+    digit4 = minutes%10;
   }
   //Show everything on the nixies
   writeNixie(cathodes[digit1], anodes[0], digit1);
