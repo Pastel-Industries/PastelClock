@@ -42,9 +42,10 @@ Some tubes might flicker from time to time.
 `02.09.2022` - First version upload - fixed power supply issue. BOM coming soon!\
 `03.09.2022` - Optimized code, decreased amount of flickering. Improved code readability.\
 `06.10.2022` - Clock will update its time only at startup and then count it itself.
+`23.10.2022` - Fixed clock de-synchronizing. It is also accurate to a single second.
 
 ## Known issues
-- Clock may be a bit inaccurate. (-1.5min/week)
+- Empty! :D
 
 ## Issues
 
