@@ -6,8 +6,8 @@
 //User config
 int tubetime = 3; //Time in milliseconds of lamp ignite time (Increase when tube is not glowing, decrease when flickering is visible)
 const long utcOffsetInSeconds = 7200; //Positive offset in seconds (UTC + 2hrs(7200 seconds))
-const char *ssid     = "MySSID"; //Your WiFi SSID
-const char *password = "MyPASS"; //Your WiFi password
+const char *ssid     = "YourSSID"; //Your WiFi SSID
+const char *password = "YourPASS"; //Your WiFi password
 
 //Pin definitions
 int cathodes[10] = {0, 1, 2, 3, 7, 6, 5, 4, 0, 1};
@@ -15,11 +15,13 @@ int anodes[4] = {16, 14, 12, 13};
 
 int hours;
 int minutes;
+int seconds;
 int digit1;
 int digit2;
 int digit3;
 int digit4;
 int oldminutemillis;
+int millistocompensate;
 
 Adafruit_PCF8574 pcf1;
 Adafruit_PCF8574 pcf2;
@@ -75,6 +77,8 @@ void updatetime(){
   timeClient.update();
   hours = timeClient.getHours();
   minutes = timeClient.getMinutes();
+  seconds = timeClient.getSeconds();
+  millistocompensate = seconds*1000;
 
   //Split up numbers into digits
   digit1 = (hours/10)%10;
@@ -139,7 +143,8 @@ void setup() {
 
 void loop() {
   //Update time every 60 seconds
-  if(millis() - oldminutemillis >= 60000){
+  if(millis() - oldminutemillis >= 60000 - millistocompensate){
+    millistocompensate = (millis() - oldminutemillis) - 60000;
     minutes++;
     if(minutes >= 60){
       hours++;
