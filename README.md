@@ -23,7 +23,7 @@ WiFiUdp.h
 
 ## Configuration
 
-This is an explanation of available config:
+Here's an explanation of available config:
 
 ```
 tubetime - Time in milliseconds of lamp ignite time (Increase when tube is not glowing, decrease when flickering is visible)
@@ -39,10 +39,11 @@ Some tubes might flicker from time to time.
 
 
 ## Changelog
-`02.09.2022` - First version upload - fixed power supply issue. BOM coming soon!\
+`02.09.2022` - First version upload.\
 `03.09.2022` - Optimized code, decreased amount of flickering. Improved code readability.\
 `06.10.2022` - Clock will update its time only at startup and then count it itself.\
-`23.10.2022` - Fixed clock de-synchronizing. It is also accurate to a single second.
+`23.10.2022` - Fixed clock de-synchronizing. It is also accurate to a single second.\
+`11.11.2022` - Redesigned PCB a bit. Also fixed the power supply issue (Now using LM317 as a main 3v3 source).
 
 ## Known issues
 - Empty! :D
