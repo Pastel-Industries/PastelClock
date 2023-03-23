@@ -46,7 +46,7 @@ Some tubes might flicker from time to time.
 `11.11.2022` - Redesigned PCB a bit. Also fixed the power supply issue (Now using LM317 as a main 3v3 source). BOM has been added!
 
 ## Known issues
-- Empty! :D
+- Clock might get a little bit late over time. There's no fix atm.(Need to restart it every weekend)
 
 ## Issues
 
